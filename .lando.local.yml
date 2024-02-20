@@ -1,0 +1,16 @@
+proxy:
+  appserver_nginx:
+    - jcp-dev-backend.lndo.site
+tooling:
+  uli:
+    service: appserver
+    description: Nos da la url de nuestro oneapp Local
+    cmd: "drush uli --uri jcp-dev-backend.lndo.site"
+  cinstall:
+    service: appserver
+    description: Instala las dependencias del composer
+    cmd:
+     - rm -rf vendor
+     - rm -f composer.lock
+     - composer install
+     - composer update
