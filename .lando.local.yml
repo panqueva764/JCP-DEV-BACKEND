@@ -4,7 +4,7 @@ proxy:
 tooling:
   uli:
     service: appserver
-    description: Nos da la url de nuestro oneapp Local
+    description: Nos da la url de nuestro Local
     cmd: "drush uli --uri jcp-dev-backend.lndo.site"
   cinstall:
     service: appserver
