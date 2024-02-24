@@ -4,6 +4,7 @@ use App\Http\Controllers\TitleController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\DownloadPdfController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResponseController;
@@ -107,3 +108,15 @@ Route::prefix('experiences')->group(function () {
     Route::put('/{id}', [ExperienceController::class, 'update']);
     Route::delete('/{id}', [ExperienceController::class, 'destroy']);
 });
+
+/*
+| PDF Download Route
+|--------------------------------------------------------------------------
+|
+| This route handles the download of PDF files. It allows users to
+| download PDF documents stored in the system. The route is typically
+| accessed via a GET request with the PDF file identifier as a parameter.
+|
+*/
+Route::get('/download-pdf/{filename}', [DownloadPdfController::class, 'download']);
+
