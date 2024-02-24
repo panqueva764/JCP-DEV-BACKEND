@@ -15,7 +15,8 @@ class CreateCertificatesTable extends Migration
             $table->string('duration');
             $table->string('level');
             $table->string('language');
-            $table->string('knowledge_type'); // Puedes cambiar esto según tu necesidad
+            $table->string('knowledge_type');
+            $table->string('pdf_url');
             $table->boolean('enabled');
             $table->timestamps();
         });

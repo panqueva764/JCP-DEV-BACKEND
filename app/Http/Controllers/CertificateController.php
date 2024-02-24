@@ -39,12 +39,10 @@ class CertificateController extends Controller
                     $groupedCertificates['Architecture'][] = $certificate;
                     break;
                 default:
-                    // Si hay un tipo desconocido, simplemente lo omitimos
                     break;
             }
         }
 
-        // Ahora, los certificados están agrupados por knowledge_type en $groupedCertificates
         return response()->json($groupedCertificates);
     }
 
@@ -63,6 +61,7 @@ class CertificateController extends Controller
             'level' => 'required|string',
             'language' => 'required|string',
             'knowledge_type' => 'required|string',
+            'pdf_url' => 'required|string',
             'enabled' => 'required|boolean'
         ]);
 
@@ -99,6 +98,7 @@ class CertificateController extends Controller
             'level' => 'required|string',
             'language' => 'required|string',
             'knowledge_type' => 'required|string',
+            'pdf_url' => 'required|string',
             'enabled' => 'required|boolean'
         ]);
 

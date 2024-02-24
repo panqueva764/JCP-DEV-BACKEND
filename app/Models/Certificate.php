@@ -9,5 +9,5 @@ class Certificate extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'platform', 'duration', 'level', 'language', 'knowledge_type', 'enabled'];
+    protected $fillable = ['name', 'platform', 'duration', 'level', 'language', 'knowledge_type', 'pdf_url', 'enabled'];
 }
