@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TitleController;
+use App\Http\Controllers\CertificateController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResponseController;
@@ -53,4 +54,21 @@ Route::prefix('titles')->group(function () {
     Route::get('/{id}', [TitleController::class, 'show']);
     Route::put('/{id}', [TitleController::class, 'update']);
     Route::delete('/{id}', [TitleController::class, 'destroy']);
+});
+
+/*
+| Certificates Routes
+|--------------------------------------------------------------------------
+|
+| Here are the routes for managing Certificates in the API. These routes allow
+| you to perform CRUD (Create, Read, Update, Delete) operations on Certificates.
+| All routes are prefixed with '/Certificates'.
+|
+*/
+Route::prefix('certificates')->group(function () {
+    Route::get('/', [CertificateController::class, 'index']);
+    Route::post('/', [CertificateController::class, 'store']);
+    Route::get('/{id}', [CertificateController::class, 'show']);
+    Route::put('/{id}', [CertificateController::class, 'update']);
+    Route::delete('/{id}', [CertificateController::class, 'destroy']);
 });
