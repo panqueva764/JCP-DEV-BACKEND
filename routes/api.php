@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\TitleController;
 use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResponseController;
@@ -71,4 +72,21 @@ Route::prefix('certificates')->group(function () {
     Route::get('/{id}', [CertificateController::class, 'show']);
     Route::put('/{id}', [CertificateController::class, 'update']);
     Route::delete('/{id}', [CertificateController::class, 'destroy']);
+});
+
+/*
+| Project Routes
+|--------------------------------------------------------------------------
+|
+| Here are the routes for managing projects in the API. These routes allow
+| you to perform CRUD (Create, Read, Update, Delete) operations on projects.
+| All routes are prefixed with '/projects'.
+|
+*/
+Route::prefix('projects')->group(function () {
+    Route::get('/', [ProjectController::class, 'index']);
+    Route::post('/', [ProjectController::class, 'store']);
+    Route::get('/{id}', [ProjectController::class, 'show']);
+    Route::put('/{id}', [ProjectController::class, 'update']);
+    Route::delete('/{id}', [ProjectController::class, 'destroy']);
 });
