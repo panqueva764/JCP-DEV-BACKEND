@@ -1,64 +1,32 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# JCP-DEV-BACKEND
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Descripción
 
-## About Laravel
+Esta plataforma es una aplicación web diseñada para gestionar certificados de cursos y capacitaciones. Proporciona una herramienta centralizada para almacenar, buscar y administrar certificados digitales de diversos tipos de cursos y programas de formación.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+La plataforma se compone de las siguientes funcionalidades:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. **API de Certificados:** Permite la gestión completa de certificados, incluyendo la creación, edición, visualización y eliminación. Proporciona endpoints para buscar certificados por diferentes criterios y generar estadísticas sobre el desempeño de los usuarios.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+2. **API de Proyectos:** Facilita la gestión de proyectos, permitiendo la creación, edición, visualización y eliminación de proyectos. Los usuarios pueden adjuntar certificados a proyectos específicos y realizar un seguimiento del progreso del proyecto.
 
-## Learning Laravel
+3. **API de Experiencias:** Permite a los usuarios registrar su experiencia laboral, incluyendo el nombre del empleador, el cargo, la duración del empleo y una descripción detallada de las responsabilidades y logros.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+4. **API de Respuestas:** Ofrece una funcionalidad para gestionar mensajes de bienvenida personalizados que se muestran en el front-end de la aplicación. Los usuarios pueden crear, editar y eliminar mensajes de bienvenida según sus necesidades.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+5. **API de Descarga de PDF:** Proporciona una interfaz para que los usuarios descarguen certificados en formato PDF. Los certificados se generan dinámicamente a partir de los datos almacenados en la plataforma y se entregan al usuario como archivos PDF descargables.
 
-## Laravel Sponsors
+6. **API de Integración de Datos:** Facilita la integración con sistemas externos, permitiendo la importación y exportación de datos de certificados, proyectos y experiencias laborales mediante endpoints RESTful.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Instalación
 
-### Premium Partners
+1. Clona este repositorio en tu máquina local.
+2. Instala las dependencias del proyecto utilizando Composer.
+3. Copia el archivo `.env.example` y renómbralo a `.env`.
+4. Genera una nueva clave de aplicación.
+5. Configura tu base de datos en el archivo `.env` y ejecuta las migraciones.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Créditos
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Autor: [Juan Camilo Panqueva B.]
+- Email: [panqueva763@gmail.com]
