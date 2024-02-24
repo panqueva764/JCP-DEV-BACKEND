@@ -10,8 +10,8 @@ class DownloadPdfController extends Controller
     public function download(Request $request, $filename)
     {
         // Verificar si el archivo existe en la carpeta storage/app/pdf
-        $filePath = storage_path('app/pdf/' . $filename);
-        if (!Storage::exists('pdf/' . $filename)) {
+        $filePath = config_path('app/pdf/' . $filename);
+        if (!file_exists($filePath)) {
             abort(404);
         }
 
