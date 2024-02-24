@@ -3,10 +3,10 @@
 use App\Http\Controllers\TitleController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ExperienceController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResponseController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -89,4 +89,21 @@ Route::prefix('projects')->group(function () {
     Route::get('/{id}', [ProjectController::class, 'show']);
     Route::put('/{id}', [ProjectController::class, 'update']);
     Route::delete('/{id}', [ProjectController::class, 'destroy']);
+});
+
+/*
+| Experience Routes
+|--------------------------------------------------------------------------
+|
+| Here are the routes for managing experiences in the API. These routes allow
+| you to perform CRUD (Create, Read, Update, Delete) operations on experiences.
+| All routes are prefixed with '/experiences'.
+|
+*/
+Route::prefix('experiences')->group(function () {
+    Route::get('/', [ExperienceController::class, 'index']);
+    Route::post('/', [ExperienceController::class, 'store']);
+    Route::get('/{id}', [ExperienceController::class, 'show']);
+    Route::put('/{id}', [ExperienceController::class, 'update']);
+    Route::delete('/{id}', [ExperienceController::class, 'destroy']);
 });
