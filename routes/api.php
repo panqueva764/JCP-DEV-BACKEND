@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\ResponseController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,19 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/*
+|--------------------------------------------------------------------------
+| API Response Routes
+|--------------------------------------------------------------------------
+|
+| Here are the routes for managing API responses. These routes allow you
+| to perform CRUD (Create, Read, Update, Delete) operations on API
+| response data.
+|
+*/
+Route::prefix('api-response')->group(function () {
+    Route::get('/', [ResponseController::class, 'show']);
+    Route::post('/', [ResponseController::class, 'store']);
+    Route::put('/{id}', [ResponseController::class, 'update']);
+}); 
