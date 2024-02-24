@@ -21,24 +21,18 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-/**
- * Obtiene la información de bienvenida para el front-end de la aplicación.
- *
- * @group Api Response
- */
-Route::get('/api-response', [ResponseController::class, 'show']);
-
-/**
- * Guarda la información de bienvenida para el front-end de la aplicación.
- *
- * @group Api Response
- */
-Route::post('/api-response', [ResponseController::class, 'store']);
-
-/**
- * Actualiza la información de bienvenida para el front-end de la aplicación.
- *
- * @group Api Response
- */
-Route::put('/api-response/{id}', [ResponseController::class, 'update']);
-
+/*
+|--------------------------------------------------------------------------
+| API Response Routes
+|--------------------------------------------------------------------------
+|
+| Here are the routes for managing API responses. These routes allow you
+| to perform CRUD (Create, Read, Update, Delete) operations on API
+| response data.
+|
+*/
+Route::prefix('api-response')->group(function () {
+    Route::get('/', [ResponseController::class, 'show']);
+    Route::post('/', [ResponseController::class, 'store']);
+    Route::put('/{id}', [ResponseController::class, 'update']);
+}); 
